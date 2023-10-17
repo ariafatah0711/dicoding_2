@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo list</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- font awosome -->
+    <script src="https://kit.fontawesome.com/0d6ed94a1b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- header start -->
+    <header class="header">
+        <h1 id="headerTitle">BookShelf Apps</h1>
+    </header>
+    <!-- header end -->
+
+    <!-- main start -->
+    <main class="wrapper" id="main1">
+        <div class="header">
+            <div class="search">
+                <label for="search"><i class="fa-solid fa-search"></i></label>
+                <input id="search" type="text" onkeyup="search()" 
+                placeholder="Search Book" spellcheck="false" maxlength="20">
+            </div>
+            <button id="btnShowForm" onclick="showForm('true')">add Book</button>
+            <button id="btnReset" onclick="syncData('reset')">Reset Book</button>
+        </div>
+        <section>
+            <details open>
+                <summary>Belum Selesai Dibaca</summary>
+                <ul id="compleateRead"></ul>
+            </details>
+            <details open>
+                <summary>Selesai Dibaca</summary>
+                <ul id="inCompleateRead"></ul>
+            </details>
+        </section>
+    </main>
+    <!-- main end -->
+
+    <!-- form data start -->
+    <main class="wrapper hidden" id="main2">
+        <button id="btn-exit" onclick="showForm('false')"><i class="fa-solid fa-plus fa-2x"></i></button>
+        <form name="formBook">
+            <caption><h1>Masukan Buku Baru</h1></caption>
+            <label for="judul">Judul buku: </label>
+            <input id="judul" type="text" required>
+            <label for="penulis">Penulis: </label>
+            <input id="penulis" type="text" required>
+            <label for="tahun">Tahun: </label>
+            <input id="tahun" type="text" required minlength="4" maxlength="4" placeholder="YYYY">
+            <label for="dibaca">Selesai dibaca <input id="dibaca" type="checkbox"></label>
+            
+            <input type="submit" value="tambahkan buku">
+        </form>
+    </main>
+    <!-- form data end -->
+
+    <!-- script -->
+    <script src="./script/script.js"></script>
+
+</body>
+</html>
