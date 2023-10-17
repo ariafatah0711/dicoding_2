@@ -51,7 +51,8 @@
             <label for="penulis">Penulis: </label>
             <input id="penulis" type="text" required>
             <label for="tahun">Tahun: </label>
-            <input id="tahun" type="text" required minlength="4" maxlength="4" placeholder="YYYY">
+            <input id="tahun" type="number" required 
+            minlength="4" maxlength="4" placeholder="YYYY" min="1000" max="9999">
             <label for="dibaca">Selesai dibaca <input id="dibaca" type="checkbox"></label>
             
             <input type="submit" value="tambahkan buku">
