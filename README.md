@@ -1,10 +1,10 @@
 ## #2. Belajar Membuat Front-End Web untuk Pemula
-date:  -  - 2023 <br>
+date: 17 - OKT - 2023 <br>
 time: 2 days <br>
 by  : ariafatah <br>
 
-<!-- <a href="https://www.dicoding.com/certificates/">id kredensial</a><br> -->
-<!-- <a href="https://ariafatah0711.github.io/dicoding_2/">DEMO WEB</a> -->
+<a href="https://www.dicoding.com/certificates/1RXY07Y5QZVM">id kredensial</a><br>
+<a href="https://ariafatah0711.github.io/dicoding_2/">DEMO WEB</a>
 
 <hr>
 
