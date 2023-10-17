@@ -1,4 +1,4 @@
-## #2. belajar membuat front-end web untuk pemula
+## #2. Belajar Membuat Front-End Web untuk Pemula
 date:  -  - 2023 <br>
 time: 2 days <br>
 by  : ariafatah <br>
