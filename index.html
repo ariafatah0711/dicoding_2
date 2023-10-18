@@ -25,8 +25,8 @@
                 <input id="search" type="text" onkeyup="search()" 
                 placeholder="Search Book" spellcheck="false" maxlength="20">
             </div>
-            <button id="btnShowForm" onclick="showForm('true')">add Book</button>
-            <button id="btnReset" onclick="syncData('reset')">Reset Book</button>
+            <button id="btnShowForm" onclick="showForm('true')">add</button>
+            <button id="btnReset" onclick="syncData('reset')">Reset</button>
         </div>
         <section>
             <details open>
@@ -45,17 +45,17 @@
     <main class="wrapper hidden" id="main2">
         <button id="btn-exit" onclick="showForm('false')"><i class="fa-solid fa-plus fa-2x"></i></button>
         <form name="formBook">
-            <caption><h1>Masukan Buku Baru</h1></caption>
+            <caption><h1 id="caption-farmBook">Masukan Buku Baru</h1></caption>
             <label for="judul">Judul buku: </label>
             <input id="judul" type="text" required>
             <label for="penulis">Penulis: </label>
             <input id="penulis" type="text" required>
             <label for="tahun">Tahun: </label>
             <input id="tahun" type="number" required 
-            minlength="4" maxlength="4" placeholder="YYYY" min="1000" max="9999">
+            placeholder="YYYY" min="1000" max="3000">
             <label for="dibaca">Selesai dibaca <input id="dibaca" type="checkbox"></label>
             
-            <input type="submit" value="tambahkan buku">
+            <input type="submit" value="tambahkan buku" id="editSubmit">
         </form>
     </main>
     <!-- form data end -->

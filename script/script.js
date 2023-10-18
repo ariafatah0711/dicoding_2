@@ -23,6 +23,10 @@ function search() {
 function showForm(method) {
   const main1 = document.getElementById("main1");
   const main2 = document.getElementById("main2");
+  caption = document.getElementById("caption-farmBook").textContent =
+    "Tambahkan Buku Baru";
+  submit = document.getElementById("editSubmit").value = "tambahkan data";
+  document.forms["formBook"].reset();
   if (method === "true") {
     main1.classList.add("hidden");
     main2.classList.remove("hidden");
@@ -60,8 +64,9 @@ function showData() {
             <p>tahun: ${tahun}</p>
         </article>
         <div class="action">
-            <button class="${read}" onclick="formData('read', this)" id="action"><i class="fa-solid fa-check"></i></button>
-            <button class="trash" onclick="formData('remove', this)"><i class="fa-solid fa-trash"></i></button>
+            <button onclick="formData('edit', this)" id="btn-edit"><i class="fa-solid fa-edit"></i></button>
+            <button class="${read}" onclick="formData('read', this)" id="btn-change"><i class="fa-solid fa-check"></i></button>
+            <button class="trash" onclick="formData('remove', this)" id="btn-remove"><i class="fa-solid fa-trash"></i></button>
         </div>
     `;
     if (data[i].isComplete === false) {
@@ -117,6 +122,40 @@ function syncData(method, value, status) {
       localStorage.setItem(key, JSON.stringify(data));
       location.reload();
       break;
+    case "edit":
+      showForm("true");
+      // ubah form
+      document.getElementById("judul").value = data[value].title;
+      document.getElementById("penulis").value = data[value].author;
+      document.getElementById("tahun").value = data[value].year;
+      document.getElementById("dibaca").checked = data[value].isComplete;
+      document.getElementById("editSubmit").value = "ubah data";
+      document.getElementById(
+        "caption-farmBook"
+      ).textContent = `Ubah Data ${data[value].title}`;
+      // kirim data
+      document.forms["formBook"].onsubmit = function () {
+        let judul, penulis, tahun, dibaca, dataItem;
+        judul = document.getElementById("judul").value;
+        penulis = document.getElementById("penulis").value;
+        tahun = document.getElementById("tahun").value;
+        dibaca = document.getElementById("dibaca").checked;
+
+        // filter remove TAG
+        judul = judul.replace(/<[^>]+>/g, "");
+        penulis = penulis.replace(/<[^>]+>/g, "");
+        tahun = tahun.replace(/<[^>]+>/g, "");
+
+        dataItem = {
+          id: value,
+          title: judul,
+          author: penulis,
+          year: tahun,
+          isComplete: dibaca,
+        };
+        syncData("post", dataItem);
+      };
+      break;
     case "reset":
       const resetData = confirm("semua data akan terhapus! apakah anda yakin?");
       if (resetData === true) {
@@ -159,6 +198,10 @@ function formData(method, element) {
     case "read":
       parentElement = element.parentNode.parentNode.id;
       syncData("change", parentElement);
+      break;
+    case "edit":
+      parentElement = element.parentNode.parentNode.id;
+      syncData("edit", parentElement);
       break;
   }
 }

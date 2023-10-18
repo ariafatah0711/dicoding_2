@@ -57,7 +57,7 @@ header {
     border-bottom: var(--border);
 }
 .header .search {
-    font-size: 145%; padding: 0 5px; min-width: 200px;
+    font-size: 145%; padding: 0 5px; min-width: 100px;
     display: flex; align-items: center; gap: 5px;
     border: 1px solid grey; border-radius: 5px; opacity: 0.8;
     background: #ffffff;
@@ -66,8 +66,8 @@ header {
 .header .search input {background: #ffffff;}
 
 .header button {
-    width: 100px; height: 25px; padding: 1px 5px;
-    display: flex; justify-content: center; align-items: center;
+    width: 100px; height: 25px; padding: 1px 2px; margin-left: 5px;
+    display: flex; justify-content: center; align-items: center; flex-wrap: nowrap;
     border-radius: 10px; background: var(--col1); opacity: 0.85;
     color: white;
     position: relative;
@@ -114,9 +114,10 @@ li .action button {
 li .action button:hover {
     opacity: 1; background: grey;
 }
-li button.trash {color: red;}
-li button#action {color: black;}
-li button#action.read {color: var(--col3);}
+li button#btn-remove {color: red;}
+li button#btn-change {color: black;}
+li button#btn-change.read {color: var(--col3);}
+li button#btn-edit {color: var(--col2);}
 
 /* form */
 main {background: #efefef;}
