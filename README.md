@@ -19,15 +19,29 @@
 
 ## 📋 Table of Contents
 <details>
-  <summary><b>How Im create this</b></summary>
-
-  - 
+  <summary><b>Checklist</b></summary>
+  
+  - [✔️] Adding New Book Data.
+  - [✔️] Having at least Two Bookshelves, namely "Unfinished Reading" and "Finished Reading".
+  - [✔️] Moving Books between Shelves.
+  - [✔️] Deleting Book Data.
+  - [✔️] Utilizing localStorage for Storing Book Data.
+  - [✔️] Application functions properly (bug-free, no force close, smooth functionality, etc.).
 </details>
 
 <details>
-  <summary><b>What this web can do</b></summary>
+  <summary><b>How I Created This Web</b></summary>
 
-  - 
+  - The design was created without using Figma.
+  - JavaScript is used only with the concepts I understand and learn, with additional insights from learning sources on YouTube and contributions from ChatGPT.
+</details>
+
+<details>
+  <summary><b>What This Web Can Do</b></summary>
+
+  - Book Search: Users can search for books based on titles by filling in the search field.
+  - Adding Books: The "Add Book" button brings up a form to add a book. After filling it out and adding, the book is automatically added to the list.
+  - Book Management: Users can move books between shelves, delete books, change book data, and reset book data.
 </details>
 
 <p id="download"></p>
@@ -50,4 +64,4 @@ git clone https://github.com/ariafatah0711/dicoding_2.git
 
 ## ©️ license
 <a href="https://github.com/ariafatah0711" alt="CREATED"><img src="https://img.shields.io/static/v1?style=for-the-badge&label=CREATED%20BY&message=ariafatah0711&color=000000"></a>
-<a href="https://github.com/ariafatah0711/ariafatah0711/blob/main/LICENSE" alt="LICENSE"><img src="https://img.shields.io/static/v1?style=for-the-badge&label=LICENSE&message=APACHE&color=000000"></a>
+<a href="https://github.com/ariafatah0711/dicoding_2/blob/main/LICENSE" alt="LICENSE"><img src="https://img.shields.io/static/v1?style=for-the-badge&label=LICENSE&message=APACHE&color=000000"></a>
