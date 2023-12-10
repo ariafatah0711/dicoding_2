@@ -1,24 +1,53 @@
-## #2. Belajar Membuat Front-End Web untuk Pemula
-date: 17 - OKT - 2023 <br>
-time: 2 days <br>
-by  : ariafatah <br>
+# dicoding_2
+## Belajar Membuat Front-End Web untuk Pemula
 
-<a href="https://www.dicoding.com/certificates/1RXY07Y5QZVM">id kredensial</a><br>
-<a href="https://ariafatah0711.github.io/dicoding_2/">DEMO WEB</a>
+<p align="center">
+  <a href="#description">description</a> •
+  <a href="#table-of-contents">table of contents</a> •
+  <a href="#download">Download</a> •
+  <a href="#related">Related</a> •
+  <a href="#license">License</a>
+</p>
 
-<hr>
+<p id="description"></p>
 
-### bagaimana aku membuat web ini
-- untuk tampilan ini dibuat tanpa mendesign dari figma
-- web ini dibuat oleh ariafatah dan untuk penggunaan javascript aku membuat dengan pengetahuan yang aku dapatkan saja
-- aku mengerjakan web ini selama kurang lebih 2 hari. 1 hari untuk tampilan, 1 hari lagi untuk javascript
+## 🚀 Description
+- create by  : ariafatah
+- date-submit: 17 - OKT - 2023
 
-### yang dapat di lakukan web ini
-- mencari buku: pengguna dapat mencari buku berdasarkan judul dengan mengisi kolam pencarian
-- menambahkan buku: ada tombol "add book" yang saat ditekan akan muncul formulir menambahkan buku dan nanti setelah di isi dan di tambahkan akan otomatis masuk ke dalam daftar
-- mengelola buku: dapat memindahakan ke buku kategori "belum selesai" ataupun "sudah selesai"
-- menghapus buku: mengahpus salah satu buku dengan mengklik icon sampah di list
-- mereset data: menghapus seluruh data
+<p id="table-of-contents"></p>
 
-## BY ARIA FATAH
-## GITHUB: ariafatah0711
+## 📋 Table of Contents
+<details>
+  <summary><b>How Im create this</b></summary>
+
+  - 
+</details>
+
+<details>
+  <summary><b>What this web can do</b></summary>
+
+  - 
+</details>
+
+<p id="download"></p>
+
+## 🔨 Download
+
+1. Open a terminal or command prompt on your computer.
+2. Navigate to the directory where you want to save this project.
+3. Use the following command to download the project from the GitHub repository:
+```sh
+git clone https://github.com/ariafatah0711/dicoding_2.git
+```
+
+<p id="related"></p>
+
+## 📈 related
+<a href="https://ariafatah0711.github.io/dicoding_2/" alt="DEMO"><img src="https://img.shields.io/static/v1?style=for-the-badge&label=DEMO&message=WEB&color=000000"></a>
+
+<p id="license"></p>
+
+## ©️ license
+<a href="https://github.com/ariafatah0711" alt="CREATED"><img src="https://img.shields.io/static/v1?style=for-the-badge&label=CREATED%20BY&message=ariafatah0711&color=000000"></a>
+<a href="https://github.com/ariafatah0711/ariafatah0711/blob/main/LICENSE" alt="LICENSE"><img src="https://img.shields.io/static/v1?style=for-the-badge&label=LICENSE&message=APACHE&color=000000"></a>
