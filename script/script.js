@@ -157,11 +157,18 @@ function syncData(method, value, status) {
       };
       break;
     case "reset":
-      const resetData = confirm("semua data akan terhapus! apakah anda yakin?");
-      if (resetData === true) {
-        localStorage.clear();
-        location.reload();
-      }
+      swal({
+        title: "Are you sure?",
+        text: "semua data akan terhapus! apakah anda yakin?",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      }).then((willDelete) => {
+        if (willDelete) {
+          localStorage.clear();
+          location.reload();
+        }
+      });
       break;
   }
 }
