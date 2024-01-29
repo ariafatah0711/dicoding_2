@@ -19,6 +19,7 @@
     text-decoration: none;
     user-select: none;
     overflow-x: hidden;
+    overflow-y: hidden;
     /* text-transform: capitalize; */
     /* transition: all 0.2s ease; */
 }
@@ -140,6 +141,7 @@ main #btn-exit:hover {
     transform: rotate(-45deg);
 }
 form input {
+    display: flex;
     border: var(--border); margin: 5px 0 10px 0;
     width: 50%; padding: 5px 15px; border-radius: 15px;
 }
@@ -147,10 +149,31 @@ form input:focus {
     background: var(--col1); color: white;
 }
 form input[type="submit"] {
+    display: inline;
     width: 50%; background: var(--col1); color: white;
 }
 form input[type="checkbox"] {
     width: auto;
+}
+label {
+    display: flex;
+    gap: 10px;
+    font-size: 1.3rem;
+}
+
+/* details */
+details {
+    padding: .5rem 1rem;
+}
+summary {
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+summary > * {
+    display: inline;
+}
+summary:hover {
+    background: lightgray;
 }
 
 .hidden {display: none;}

@@ -9,7 +9,6 @@
     <!-- sweatallert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- font awosome -->
-    <!-- <script src="https://kit.fontawesome.com/0d6ed94a1b.js" crossorigin="anonymous"></script> -->
     <script src="./icon/js/all.min.js"></script>
 </head>
 <body>
@@ -51,9 +50,9 @@
         <form name="formBook">
             <caption><h1 id="caption-farmBook">Masukan Buku Baru</h1></caption>
             <label for="judul">Judul buku: </label>
-            <input id="judul" type="text" required maxlength="30">
+            <input id="judul" type="text" required maxlength="30" autocomplete="off">
             <label for="penulis">Penulis: </label>
-            <input id="penulis" type="text" required maxlength="50">
+            <input id="penulis" type="text" required maxlength="50" autocomplete="off">
             <label for="tahun">Tahun: </label>
             <input id="tahun" type="number" required 
             placeholder="YYYY" min="1000" max="3000">

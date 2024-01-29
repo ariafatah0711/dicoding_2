@@ -1,6 +1,3 @@
-// #####################################################################################################
-// button
-// #####################################################################################################
 // search
 function search() {
   let input, filter, li, h3, txtValue;
@@ -36,9 +33,6 @@ function showForm(method) {
   }
 }
 
-// #####################################################################################################
-// main script
-// #####################################################################################################
 // show data
 const container1 = document.getElementById("compleateRead");
 const container2 = document.getElementById("inCompleateRead");
@@ -70,10 +64,8 @@ function showData() {
         </div>
     `;
     if (data[i].isComplete === false) {
-      //   container1.appendChild(item);
       container1.insertAdjacentHTML("afterbegin", item.outerHTML);
     } else {
-      //   container2.appendChild(item);
       container2.insertAdjacentHTML("afterbegin", item.outerHTML);
     }
   }
@@ -134,7 +126,7 @@ function syncData(method, value, status) {
         "caption-farmBook"
       ).textContent = `Ubah Data ${data[value].title}`;
       // kirim data
-      document.forms["formBook"].onsubmit = function () {
+      document.forms["formBook"].onsubmit = function (e) {
         let judul, penulis, tahun, dibaca, dataItem;
         judul = document.getElementById("judul").value;
         penulis = document.getElementById("penulis").value;
@@ -154,7 +146,16 @@ function syncData(method, value, status) {
           year: tahun,
           isComplete: dibaca,
         };
-        syncData("post", dataItem);
+
+        swal({
+          title: "buku telah diperbarui",
+          text: "buku anda telah berhasil diperbarui",
+          icon: "success",
+          button: "ok",
+        }).then(() => {
+          syncData("post", dataItem);
+        });
+        e.preventDefault();
       };
       break;
     case "reset":
@@ -198,11 +199,30 @@ function formData(method, element) {
         year: tahun,
         isComplete: dibaca,
       };
-      syncData("post", dataItem);
+
+      swal({
+        title: "buku telah ditambahkan",
+        text: "buku anda telah berhasil ditambahkan!",
+        icon: "success",
+        button: "ok",
+      }).then(() => {
+        syncData("post", dataItem);
+      });
+
       break;
     case "remove":
-      parentElement = element.parentNode.parentNode.id;
-      syncData("remove", parentElement);
+      swal({
+        title: "Are you sure?",
+        text: `apakah anda yakin ingin menghapus buku ini?`,
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      }).then((willDelete) => {
+        if (willDelete) {
+          parentElement = element.parentNode.parentNode.id;
+          syncData("remove", parentElement);
+        }
+      });
       break;
     case "read":
       parentElement = element.parentNode.parentNode.id;
@@ -210,6 +230,7 @@ function formData(method, element) {
       break;
     case "edit":
       parentElement = element.parentNode.parentNode.id;
+      parentElement = parseInt(parentElement);
       syncData("edit", parentElement);
       break;
   }
