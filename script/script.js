@@ -145,6 +145,7 @@ function syncData(method, value, status) {
         judul = judul.replace(/<[^>]+>/g, "");
         penulis = penulis.replace(/<[^>]+>/g, "");
         tahun = tahun.replace(/<[^>]+>/g, "");
+        tahun = parseInt(tahun);
 
         dataItem = {
           id: value,
@@ -188,6 +189,7 @@ function formData(method, element) {
       judul = judul.replace(/<[^>]+>/g, "");
       penulis = penulis.replace(/<[^>]+>/g, "");
       tahun = tahun.replace(/<[^>]+>/g, "");
+      tahun = parseInt(tahun);
 
       dataItem = {
         id: +new Date(),
